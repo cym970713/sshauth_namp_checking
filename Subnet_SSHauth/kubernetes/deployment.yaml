@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      restartPolicy: Never  #Prevent repetitive restart from kubectl 
+      containers:
+      - name: my-container
+        image: ssh:latest #refer the docker image you want to pull
+        imagePullPolicy: Never  #Ensure pull the image from local host 
+        volumeMounts:
+        - name: data-volume
+          mountPath: /app/data/output #mount from directory of container
+      volumes:
+      - name: data-volume
+        hostPath:
+          path: /home/hspe/Subnet_SSHauth/data/output/ # mount to directory of local host

@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: my-cronjob
+spec:
+  schedule: "0 */8 * * *"  #based on your usage, this is for every 8 hours.
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: my-container
+            image: ssh:latest  #refer the docker image you want to pull
+            imagePullPolicy: Never  #Ensure pull the image from local host
+            volumeMounts:
+            - name: data-volume
+              mountPath: /app/data/output    #mount from directory of container 
+          volumes:
+          - name: data-volume
+            hostPath:
+              path: /home/hspe/Subnet_SSHauth/data/output/ # mount to directory of local host
+          restartPolicy: OnFailure
