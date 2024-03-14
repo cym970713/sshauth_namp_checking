@@ -2,7 +2,7 @@
 Script to check ssh_auth in batch via nmap 
 
 ## Project Description
-This project aim to performing ssh_auth checking for the subnet in batch. 
+This project aim to perform ssh_auth checking for the subnet in batch. 
 It will implement with Docker and Kuburnetes(minikube) for running the task as an application periodically. 
 
 ## File and Folder Structure
