@@ -9,9 +9,9 @@ It will implement with Docker and Kuburnetes(minikube) for running the task as a
 
 1. **dataset:**
 - data/subnet.txt
-/// to contain the subnet that want to check ssh_auth 
+*/// to contain the subnet that want to check ssh_auth 
 - data/output/
-/// directory that contain ssh_auth result in .csv file format
+*/// directory that contain ssh_auth result in .csv file format
 
 2. **kubernetes**
 - deployment.yaml 
