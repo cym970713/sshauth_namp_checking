@@ -8,8 +8,8 @@ It will implement with Docker and Kuburnetes(minikube) for running the task as a
 ## File and Folder Structure
 
 1. **dataset:**
-- data/subnet.txt
-- /// to contain the subnet that want to check ssh_auth 
+- data/subnet.txt  
+  /// to contain the subnet that want to check ssh_auth 
 - data/output/
 - /// directory that contain ssh_auth result in .csv file format
 
