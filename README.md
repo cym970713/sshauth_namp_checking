@@ -50,7 +50,8 @@ Potential Error:
    minikube mount ~/Subnet_SSHauth/data/output/:/home/hspe/Subnet_SSHauth/data/output  
    ** local/to/directory/:/kurbenetes/to/directory/  
 4. Pull the docker image from local machine to kurbenetes container  
-   eval $(minikube docker-env) ///enter using kurbenetes env  
+   eval $(minikube docker-env)  
+   ///enter using kurbenetes env  
    go to the directory which contain DockerFile  
    docker build -t ssh .  
    docker images  
