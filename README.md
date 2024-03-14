@@ -1,4 +1,4 @@
-# sshauth_namp_checking
+# sshauth_nmap_checking
 Script to check ssh_auth in batch via nmap 
 
 ## Project Description
