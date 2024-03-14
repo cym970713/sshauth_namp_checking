@@ -9,15 +9,15 @@ It will implement with Docker and Kuburnetes(minikube) for running the task as a
 
 1. **dataset:**
 - data/subnet.txt
-*/// to contain the subnet that want to check ssh_auth 
+- /// to contain the subnet that want to check ssh_auth 
 - data/output/
-*/// directory that contain ssh_auth result in .csv file format
+- /// directory that contain ssh_auth result in .csv file format
 
 2. **kubernetes**
 - deployment.yaml 
-/// for testing purpose that the container can run to perform ssh_auth checking task
+- /// for testing purpose that the container can run to perform ssh_auth checking task
 - cronjob.yaml
-/// for performing ssh_auth checking task periodically (every 8 hours)
+- /// for performing ssh_auth checking task periodically (every 8 hours)
 
 3. **Dockerfile**
 - create a docker image for checking ssh_auth with python script as a application
@@ -28,10 +28,11 @@ It will implement with Docker and Kuburnetes(minikube) for running the task as a
 
 ## for setting up docker image in linux
 1. install docker
-2. docker build -t ssh .   /// this will create docker images in docker
-3. docker run -v host/to/directory:/container/to/directory <docker image>
-   // run docker image with mount directory from host to container
-   exmaple: docker run -v /home/hspe/Subnet_SSHauth/data/output/:/app/data/output ssh
+2. docker build -t ssh .
+- /// this will create docker images in docker
+4. docker run -v host/to/directory:/container/to/directory <docker image>
+- // run docker image with mount directory from host to container
+- exmaple: docker run -v /home/hspe/Subnet_SSHauth/data/output/:/app/data/output ssh
 
 Potential Error: 
 1. Error16: PERMISSION DENIED 
